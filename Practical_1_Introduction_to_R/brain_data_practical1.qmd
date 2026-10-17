@@ -1,0 +1,15 @@
+---
+title: "brain_data_practical1"
+author: "Catie M"
+---
+
+The number of genes with regionally elevated expression in the fore-brain of human, pig and mouse brains was investigated and the results were tabulated
+
+I want to calculate the total number of elevated genes in each of human, pig and mouse brains
+```{r}
+Human <- sum(180, 83, 57, 110)
+Pig <- sum(109, 157, 31, 45)
+Mouse <- sum(55, 185, 60, 98)
+print(paste ("In Humans:", Human, "In Pigs:", Pig, "In Mice:", Mouse))
+```
+Humans had the highest number of genes with regionally elevated expression
