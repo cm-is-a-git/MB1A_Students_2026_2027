@@ -1,4 +1,21 @@
 ---
 title: "prac2 exercises"
 ---
+#pipes exercise
+```{r}
+input_vec <- c(5, -10, 4, -3)
+output_num <- input_vec |>
+  mean() |>
+  abs() |>
+  round()
+print(output_num)
+```
+#making comparisons using operators
+```{r}
+y <- 12
+print(y == 7)
+print(y < 15)
+print(y > 20)
+print(y <= 12)
+```
 
