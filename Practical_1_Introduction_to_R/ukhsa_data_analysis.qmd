@@ -1,0 +1,45 @@
+---
+title: ""
+---
+```{r}
+library(tidyverse)
+library(gt)
+library(readr)
+library(ggplot2)
+```
+#load health data
+```{r}
+rhinovirus <- read_csv("data/ukhsa-chart-download-rhinovirus.csv")
+
+gt(head(rhinovirus))
+```
+
+```{r}
+weather <- read_csv("data/weather_data.csv")
+ggplot(weather)
+```
+```{r}
+ggplot(weather, aes(
+  x = observation_time,
+  y = temperature_c
+)) +
+  geom_line(colour = "red") +
+  xlab("Date") +
+  ylab("Temp (C)") +
+  ggtitle("Temperature by Date")
+```
+#plot health data
+```{r}
+ggplot(rhinovirus, aes(
+  x = date,
+  y = metric_value
+)) +
+  geom_line(colour = "green")+
+  ylab ("percentage") +
+  xlab ("date") +
+  ggtitle("percentage of positive test results for rhinovirus")
+  
+
+```
+
+
