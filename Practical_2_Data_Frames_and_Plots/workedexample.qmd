@@ -1,4 +1,14 @@
 ---
 title: "worked example"
 ---
+```{r}
+library(gt)
+library(tidyverse)
+library(maps)
+```
+#reading data
+```{r}
+bird_breeding_sites <- read_csv("data/breeding_site_locations.csv")
+gt(bird_breeding_sites)
+```
 
