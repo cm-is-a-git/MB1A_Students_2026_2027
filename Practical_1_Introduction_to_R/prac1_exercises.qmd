@@ -1,0 +1,92 @@
+---
+title: "prac1_exercises.qmd"
+author: "Catie McK"
+---
+
+## Quarto
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+```{r}
+my_first_vector <- c(1, 5, 9)
+print(my_first_vector)
+```
+```{r}
+character_vec <- c("hello", "this", "is", "a", "character", "vector")
+print(character_vec)
+```
+
+```{r}
+round(3.14159)
+round(3.14159, digits = 2)
+```
+```{r}
+print(rep(2, 5))
+print(rep(x = 2, times = 5))
+print(rep(5,7))
+print(rep(x = 5, times = 7))
+```
+```{r}
+x <- 32
+y <- "thisisavariable"
+z <- TRUE
+print(x)
+print(class(x))
+print (y)
+print(class(y))
+print(z)
+print(class(z))
+```
+```{r}
+cellId1 <- "CD1"
+cellId2 <- "CD2"
+treated1 <- TRUE
+treated2 <- FALSE
+C1ncells_before <- 5415
+C2ncells_before <- 8123
+C1ncells_after <- 1432
+C2ncells_after <- 7543
+
+#combine these into vectors
+cell_Id <- c(cellId1, cellId2)
+treated <- c(treated1, treated2)
+ncells_before <- c(C1ncells_before, C2ncells_before)
+ncells_after <- c(C1ncells_after, C2ncells_after)
+```
+#isolating values in a vector
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+my4thpet <- all_my_pets[4]
+print(my4thpet)
+```
+```{r}
+my_data_frame <- tibble(
+  fruit = c("apple", "pear", "banana"),
+  length = c(22, 30, 55),
+  weight = c(150, 165, 170)
+)
+
+
+print(my_data_frame)
+```
+```{r}
+my_data_frame <- tibble(
+  fruit = c("apple", "pear", "banana"),
+  length = c(22, 30, 55),
+  weight = c(150, 165, 170)
+)
+
+gt(my_data_frame)
+```
+```{r}
+my_data_frame <- tibble(
+  cellID = cell_Id,
+  treated = treated,
+  num_cells_before = ncells_before,
+  num_cells_after = ncells_after
+)
+gt(my_data_frame)
+```
+
